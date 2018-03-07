@@ -2,6 +2,15 @@ AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: Outputs the time
 Resources:
+  YXA5SecurityGroup1: 
+    Properties:
+      GroupDescription: "Security Group for estate with id: cdu.cdu-sp1.ap9.app_proxy"
+      Tags: 
+        - Key: "estate_id"
+          Value: "dfsfsfsffs"
+      VpcId: "vpc-2d45cf49"
+    Type: "AWS::EC2::SecurityGroup"
+    DependsOn: TimeFunction
   TimeFunction:
     Type: AWS::Serverless::Function
     Properties:
