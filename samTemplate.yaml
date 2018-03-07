@@ -8,6 +8,9 @@ Resources:
       Handler: index.handler
       Runtime: nodejs6.10
       CodeUri: ./
+      AutoPublishAlias: live
+      DeploymentPreference:
+         Type: AllAtOnce
       Events:
         MyTimeApi:
           Type: Api
